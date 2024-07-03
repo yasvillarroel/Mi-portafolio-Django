@@ -1,0 +1,17 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+
+<h2 class="text-center m-5 titulo_detalle">Editar contacto</h2>
+    <div class="container mt-5">
+        <form method="POST" class="needs-validation" novalidate>
+            {% csrf_token %}
+            {{ form.as_p}}
+            <div class="text-center mt-3">
+                <button type="submit" class="btnRepo p-4 m-2"><i class="fa-solid fa-floppy-disk"></i></button>
+                <a href="{% url 'contacto_lista' %}" class="btnDetalle p-4 m-2"><i class="fa-solid fa-ban"></i></a>
+            </div>
+
+            
+        </form>
+    </div>
+{% endblock %}

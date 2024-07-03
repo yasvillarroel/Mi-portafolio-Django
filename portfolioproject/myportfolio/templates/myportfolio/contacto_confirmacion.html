@@ -1,0 +1,11 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+
+    <h2 class="text-center m-5 pt-5 titulo_detalle">Mensaje enviado con éxito...😀👍</h2>
+    <div class="container mt-5">
+        <p class="text-center contactar_texto">Te contactaremos lo antes posible.</p>
+    </div>
+    <div class="text-center mt-5">
+        <a href="{% url 'home' %}" class="btn btnVisita">Volver al inicio <i class="fa-solid fa-rotate-left"></i></a>
+    </div>
+{% endblock %}

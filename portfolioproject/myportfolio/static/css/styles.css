@@ -1,0 +1,482 @@
+/*----------------------------------General----------------------------------*/
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.section {
+  padding: 50px 0;
+  position: relative;
+}
+
+.bg-light {
+  background-color: rgba(248, 249, 250) !important;
+  width: 100%;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.container {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.titulo {
+  font-weight: bold;
+  color: #b03648;
+  font-size: 30px;
+}
+
+.subtitulo {
+  color: #b03648;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+p {
+  font-size: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  
+}
+
+.btn {
+  background-color: black ;
+  color:#fff;
+  padding: 20px;
+  align-items: center;
+  border-radius: 50px;
+  text-align: center;
+  justify-content: center;
+}
+
+.btn:hover {
+  background-color: #b03648;
+  color:#fff ;
+  transition: all .5s ease;
+  border-radius: 50px;
+  padding: 20px;
+  align-items: center;
+}
+
+.btnVisita{
+  background-color: black ;
+  color:#fff;
+  padding: 8px 12px;
+  align-items: center;
+  border-radius: 50px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+
+}
+
+.btnVisita:hover{
+  background-color: #ff6961;
+  color:#fff ;
+  transition: all .5s ease;
+  border-radius: 50px;
+  padding: 10px;
+  align-items: center;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+
+.btnRepo{
+  background-color: black ;
+  color:#fff;
+  padding: 8px 12px;
+  align-items: center;
+  border-radius: 50px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+.btnRepo:hover{
+  background-color: green;
+  color:#fff ;
+  transition: all .5s ease;
+  border-radius: 50px;
+  padding: 10px;
+  align-items: center;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.btnDetalle{
+  background-color: black ;
+  color:#fff;
+  padding: 10px;
+  align-items: center;
+  border-radius: 50px;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+.btnDetalle:hover{
+  background-color: #bd0003;
+  color:#fff ;
+  transition: all .5s ease;
+  border-radius: 50px;
+  padding: 10px;
+  align-items: center;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.logo {
+  inline-size: 140px;
+  padding-right: 35px;
+}
+
+/* -------------------------------------- Navbar --------------------------------------*/
+.navbar {
+  width: 100%;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+  font-size: 18px;
+}
+
+.sticky {
+  background-color: #fff !important;
+}
+
+/* centrar el navbar */
+.custom-nav .navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-nav .container-fluid {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.custom-nav .navbar-collapse {
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-nav .logo {
+  position: relative;
+  left: 10%;
+}
+
+.custom-nav .navbar-nav .nav-item {
+  margin: 0 25px;
+}
+
+/* efectos en los nav.link */
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: black;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #C8676D;
+  visibility: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+  visibility: visible;
+}
+
+/* --------------------------------------Bienvenida-------------------------------------- */
+
+.bienvenida {
+  overflow: hidden;
+}
+
+.bienvenida .div-foto {
+  background: url(../img/fondo.jpg);
+  background-size: cover;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 70vh;
+  width: 100%;
+}
+
+.bienvenida .contenedor {
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.bienvenida .text {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* textos con movimiento */
+.contenedor .text {
+  position: relative;
+  text-align: center;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.contenedor .text.first-text {
+  color: black;
+}
+
+.text.sec-text:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #EBEBEB;
+  border-left: 2px solid black;
+  animation: animate 4s steps(8) infinite;
+
+}
+
+@keyframes animate {
+
+  40%,
+  60% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+.contenedor-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+/* --------------------------------------Sobre Mi-------------------------------------- */
+.yo_imagen {
+  inline-size: 70vh;
+}
+
+
+/* --------------------------------------Portafolio-------------------------------------- */
+.card-text {
+  color: black;
+}
+
+.card {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .4s ease-in-out;
+  display: flex;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0, 4);
+  transform: translateY(-3%);
+}
+
+/* --------------------------------------Lenguajes-------------------------------------- */
+.foto {
+  width: 100px;
+  border-radius: 8px;
+  align-items: center;
+  display: block;
+  margin: 0 auto;
+}
+
+.nombres {
+  font-weight: bold;
+}
+
+.p-5 {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.col.lenguaje:hover {
+  transform: scale(1.2);
+  transition: all .4s ease-in-out;
+}
+
+/* --------------------------------------Certificados-------------------------------------- */
+.diploma:hover {
+  transform: scale(1.2);
+}
+
+/* --------------------------------------Formulario de Contacto-------------------------------------- */
+.container-form h2 {
+  margin-bottom: 15px;
+  font-size: 35px
+}
+
+.container-form a {
+  font-size: 17px;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: 700;
+}
+
+.container-form a i {
+  color: black;
+  margin-right: 10px;
+}
+
+.container-form form .campo, textarea {
+  width: 100%;
+  padding: 15px 10px;
+  font-size: 16px;
+  border: 1px solid grey;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  outline: 0px;
+  margin-top: 20px;
+}
+
+.container-form form textarea {
+  width: 100%;
+  min-height: 140px;
+  max-height: 150px;
+}
+
+.container-form .btn-enviar {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: 0px;
+  background: black;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 300ms ease;
+  margin-top: 10px;
+}
+
+.container-form .btn-enviar:hover {
+  background: #b03648;
+  color: #fff;
+}
+
+/* -------------------------------------Pie de página (FOOTER)------------------------------------- */
+.footer {
+  background-color: #E9E9E9;
+  margin-top: 30px;
+}
+
+/* Botones redes sociales */
+.rrss {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-width: 300px;
+}
+
+.rrss a {
+  text-decoration: none;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #314652;
+  color: #f1f1f1;
+  border-radius: 50%;
+  box-shadow: 2px 2px 5px var();
+  transition: all .4s ease-in-out;
+}
+
+.rrss a:hover {
+  transform: scale(1.2);
+}
+
+/* -------------------------------------- @media-------------------------------------- */
+@media (max-width: 576px) {
+  .bienvenida .titulo {
+    font-size: 28px;
+  }
+
+  .bienvenida h2 {
+    font-size: 20px;
+  }
+
+  .bienvenida .text {
+    font-size: 20px;
+  }
+}
+
+/* Ajustes adicionales para la navbar en dispositivos pequeños */
+@media (max-width: 576px) {
+  .navbar-nav .nav-item {
+    margin: 0 10px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 15px;
+  }
+
+  .logo img {
+    max-width: 150px;
+  }
+}

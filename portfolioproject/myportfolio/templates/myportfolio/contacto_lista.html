@@ -1,0 +1,37 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+
+<h2 class="text-center mt-5 titulo_detalle">Contactos recibidos</h2>
+  <div class="contenedor p-5">
+    <div class="table-responsive">
+      <table class="table table-hover aling-middle tabla_lista">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mensaje</th>
+            <th scope="col" class="text-center">Acciones</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          {% for contacto in contactos %}
+          <tr>
+            <td>{{contacto.nombre}}</td>
+            <td>{{contacto.email}}</td>
+            <td>{{contacto.mensaje}}</td>
+            <td class="text-center columna-botones">
+              <a href="{% url 'contacto_detalle' contacto.pk %}" class="btnVisita btn-sm m-1 p-2"><i class="fa-solid fa-eye"></i></a>
+              <a href="{% url 'contacto_editar' contacto.pk %}" class="btnRepo btn-sm m-1 p-2"><i class="fa-solid fa-pen-to-square"></i></a>
+              <form method="POST" action="{% url 'contacto_eliminar' contacto.pk %}" style="display: inline;">
+                {% csrf_token %}
+                <button class="btnDetalle btn-sm m-1 p-2"><i class="fa-solid fa-trash"></i></button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+{% endblock %}

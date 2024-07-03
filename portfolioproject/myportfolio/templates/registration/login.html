@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<h2 class="text-center m-5 titulo_detalle">Iniciar sesión</h2>
+    <div class="mt-5 login">
+        
+        <form method="POST" class="text-center">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn m-2">Iniciar sesión <i class="fa-solid fa-right-to-bracket"></i></button>
+        </form>
+    </div>
+{% endblock %}

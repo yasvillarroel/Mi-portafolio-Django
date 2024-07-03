@@ -1,0 +1,17 @@
+{% extends 'base_generic.html' %}
+{% block content %}
+
+    <div class="contenedor text-center">
+        <h2 class="text-center m-5 titulo_detalle">Detalle del contacto</h2>
+        <p><strong>Nombre:</strong>{{contacto.nombre}}</p>
+        <p><strong>Email:</strong>{{contacto.email}}</p>
+        <p><strong>Mensaje:</strong>{{contacto.mensaje}}</p>
+        <a href="{% url 'contacto_editar' contacto.pk %}" class="btnRepo p-4 m-2"><i class="fa-solid fa-pen-to-square"></i></a>
+        <form method="POST" action="{% url 'contacto_eliminar' contacto.pk %}" style="display: inline;">
+            {% csrf_token %}
+            {{ form.as_p}}
+            <button type="submit" class="btnDetalle p-4 m-2"><i class="fa-solid fa-trash"></i></button>
+        </form>
+        <a href="{% url 'contacto_lista' %}" class="btnVisita p-4 m-2"><i class="fa-solid fa-rotate-left"></i></a>
+    </div>
+{% endblock %}
